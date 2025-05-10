@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+    background-color: #fefefe;
+    padding: 20px;
+    direction: rtl;
+    text-align: right;
+  }
+  
+  ul li {
+    margin: 10px 0;
+  }
+  
+  a {
+    color: darkblue;
+    text-decoration: none;
+  }
+  

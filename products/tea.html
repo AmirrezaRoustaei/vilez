@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>چای‌ساز ولز</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h2>مدل‌های چای‌ساز برند ولز</h2>
+
+  <div>
+    <img src="../assets/tea_vl2010.jpg" width="200">
+    <p>مدل VL-2010 - قیمت: ۱۰٬۶۴۰٬۰۰۰ تومان چای‌ساز 8 لیتری</p>
+    <button onclick="addToCart('VL-2010', '10640000')">افزودن به سبد خرید</button>
+  </div>
+  <div>
+    <input type="button" id="button0" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button1" style="color:rgb(0, 138, 251); width:10px; height: 5px" />  
+   <input type="button" id="button2" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button3" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button4" style="color:rgb(0, 138, 251); width:10px; height: 5px" />      
+</div>
+
+  <div>
+    <img src="../assets/tea_vl4039.jpg" width="200">
+    <p>مدل VL-4039 - قیمت: ۵٬۱۰۰٬۰۰۰ تومان چای‌ساز 3 لیتری</p>
+    <button onclick="addToCart('VL-4039', '5100000')">افزودن به سبد خرید</button>
+  </div>
+  <div>
+    <input type="button" id="button0" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button1" style="color:rgb(0, 138, 251); width:10px; height: 5px" />  
+   <input type="button" id="button2" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button3" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button4" style="color:rgb(0, 138, 251); width:10px; height: 5px" />      
+</div>
+
+<div>
+    <img src="../assets/tea_vl6035.jpg" width="200">
+    <p>مدل VL-6035 - قیمت: ۴٬۱۷۰٬۰۰۰ تومان چای‌ساز 3 لیتری</p>
+    <button onclick="addToCart('VL-6035', '4170000')">افزودن به سبد خرید</button>
+  </div>
+  <div>
+    <input type="button" id="button0" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button1" style="color:rgb(0, 138, 251); width:10px; height: 5px" />  
+   <input type="button" id="button2" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button3" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button4" style="color:rgb(0, 138, 251); width:10px; height: 5px" />      
+</div>
+
+<div>
+    <img src="../assets/tea_vl5021.jpg" width="200">
+    <p>مدل VL-5021 - قیمت: ۷٬۶۷۰٬۰۰۰ تومان چای‌ساز 3 لیتری</p>
+    <button onclick="addToCart('VL-5021', '7670000')">افزودن به سبد خرید</button>
+  </div>
+  <div>
+    <input type="button" id="button0" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button1" style="color:rgb(0, 138, 251); width:10px; height: 5px" />  
+   <input type="button" id="button2" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button3" style="color:rgb(0, 138, 251); width:10px; height: 5px" />    
+   <input type="button" id="button4" style="color:rgb(0, 138, 251); width:10px; height: 5px" />      
+</div>
+
+<div>
+    <img src="../assets/tea_vl5022.jpg" width="200">
+    <p>مدل VL-5022 - قیمت: ۷٬۶۷۰٬۰۰۰ تومان چای‌ساز 3 لیتری</p>
+    <button onclick="addToCart('VL-5022', '7670000')">افزودن به سبد خرید</button>
+</div>
+
+  <hr>
+  <h3>سبد خرید</h3>
+  <ul id="cart-items"></ul>
+
+  <script>
+    let cart = [];
+    function addToCart(model, price) {
+      cart.push({model, price});
+      alert(model + ' به سبد خرید اضافه شد');
+      updateCart();
+    }
+
+    function updateCart() {
+      const list = document.getElementById('cart-items');
+      list.innerHTML = '';
+      cart.forEach(item => {
+        list.innerHTML += `<li>${item.model} - ${item.price} تومان</li>`;
+      });
+    }
+  </script>
+
+  <a href="../index.html">بازگشت به صفحه اصلی</a>
+</body>
+</html>
